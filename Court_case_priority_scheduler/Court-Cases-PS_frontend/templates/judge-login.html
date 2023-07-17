@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Judge Login</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="static/css/main.css" />
+</head>
+<!-- <div id ="background">  </div> -->
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href={{url_for('home')}}> Home</a></li>	
+				<li>
+					<a href="https://main.sci.gov.in/" target="_blank"><img src="static/images/emblem.jpeg" id="scImg" alt="Supreme Court Logo"></a>
+				</li>	
+				<li><a href={{url_for('clerkLogin')}}> Clerk Login </a> </li>
+				<li><a href={{url_for('userLogin')}}> User Login</a></li>
+				<li class="current"> <a href={{url_for('judgeLogin')}}> Judge Login</a></li>
+			</ul>
+		</nav>
+
+		<section id="main">
+			<form method="post" id="loginContainer">
+				<div id="innerLoginContainer">
+					<label for="username">Username<input type="text" name="username" id="username"
+							class="loginFormInput" autocomplete="off"></label>
+					<label for="password">Password<input type="password" name="password" id="password"
+							class="loginFormInput" autocomplete="off"></label>
+					<input type="submit" value="Login" id="loginButton" onclick="login(event)">
+				</div>
+		</section>
+	</div>
+
+	<!-- Scripts -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/jquery.dropotron.min.js"></script>
+	<script src="static/js/jquery.scrolly.min.js"></script>
+	<script src="static/js/browser.min.js"></script>
+	<script src="static/js/breakpoints.min.js"></script>
+	<script src="static/js/util.js"></script>
+	<script src="static/js/main.js"></script>
+	<script>
+		function login(event) {
+			event.preventDefault(); // Prevent the form from submitting
+			// Get the input values
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+
+			// Check if the username and password are correct
+			if (username === "hi" && password === "hi") {
+				// Redirect to the home page
+				window.location.href = {{url_for('judgePostLogin')}};
+			} else {
+				alert("Incorrect username or password. Please try again.");
+			}
+		}
+
+
+	</script>
+
+</body>
+
+</html>

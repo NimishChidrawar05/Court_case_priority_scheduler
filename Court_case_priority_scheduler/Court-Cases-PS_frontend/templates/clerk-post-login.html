@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css" />
+    <title> Clerk Post Login </title>
+</head>
+<!-- <div id ="background">  </div> -->
+<body>
+    <div id="page-wrapper">
+
+
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li> <a href={{url_for('home')}}> Home</a></li>	
+                <li>
+                    <a href="https://main.sci.gov.in/" target="_blank"><img src="static/images/emblem.jpeg" id="scImg" alt="Supreme Court Logo"></a>
+                </li>	
+                <li class="current"><a href={{url_for('clerkLogin')}}> Clerk Login </a> </li>
+                <li><a href={{url_for('userLogin')}}> User Login</a></li>
+                <li><a href={{url_for('judgeLogin')}}> Judge Login</a></li>
+            </ul>
+        </nav>
+        <section id="main">
+            <form action='#' method="POST" id="inneraddCasesFormContainer" enctype="multipart/form-data">
+            {{form.hidden_tag()}}
+            {{form.caseFile.label()}}
+            {{form.caseFile()}}
+            {{form.filingDate.label()}}
+            {{form.filingDate()}}
+            {{form.petitioners.label()}}
+            {{form.petitioners()}}
+            {{form.respondents.label()}}
+            {{form.respondents()}}
+            {{form.submit()}}
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

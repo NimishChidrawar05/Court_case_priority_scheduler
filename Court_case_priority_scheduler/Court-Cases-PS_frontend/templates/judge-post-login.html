@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css" />
+	<link rel="stylesheet" href="static/css/style.css" />
+    <title> Judge Post Login </title>
+</head>
+<!-- <div id ="background">  </div> -->
+<body>
+    <div id="page-wrapper">
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+                <li><a href={{url_for('home')}}> Home</a></li>	
+				<li>
+					<a href="https://main.sci.gov.in/" target="_blank"><img src="static/images/emblem.jpeg" id="scImg" alt="Supreme Court Logo"></a>
+				</li>	
+				<li><a href={{url_for('clerkLogin')}}> Clerk Login </a> </li>
+				<li><a href={{url_for('userLogin')}}> User Login</a></li>
+				<li class="current"><a href={{url_for('judgeLogin')}}> Judge Login</a></li>
+			</ul>
+		</nav>
+    <section id ="main">
+        <table class="rwd-table">
+			<thead>
+				<tr>
+					<td>Case.No</td>
+					<td>Scheduled date</td>
+					<td>Judges on the bench</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>231456</td>
+					<td>12/3/2023</td>
+					<td>Justice Ajay Rastogi</td>
+				</tr>
+				<tr>
+					<td>421345</td>
+					<td>12/3/2023</td>
+					<td>Justice Mitesh Rawat</td>
+				</tr>
+				<tr>
+					<td>671535</td>
+					<td>13/3/2023</td>
+					<td>Justice Soham Bhole</td>
+				</tr>
+				<tr>
+					<td>635436</td>
+					<td>20/3/2023</td>
+					<td>Justice Srikesh Mukherjee</td>
+				</tr>
+				<tr>
+					<td>832686</td>
+					<td>25/3/2023</td>
+					<td>Justice Gagan Chaudhari</td>
+				</tr>
+				<tr>
+					<td>637833</td>
+					<td>25/3/2023</td>
+					<td>Justice Navin Pathak</td>
+				</tr>
+			</tbody>
+		</table>
+    </section>
+</body>
+</html>
